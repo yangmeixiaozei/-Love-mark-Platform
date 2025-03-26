@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="Author" content="汤钦">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.staticfile.net/twitter-bootstrap/5.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.staticfile.net/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
+  <title>AdminLogin</title>
+  <style>
+    body {
+      background-image: url('image/bg2.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: repeat;
+    }
+
+    .pink-header {
+      background-color: blue;
+      height: 50px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .watermark {
+      background-color: yellow;
+      position: fixed;
+      bottom: 50px;
+      right: 10px;
+      opacity: 0.5;
+      z-index: 2;
+    }
+
+    .link1 {
+      float: left;
+      margin-left: 10px;
+    }
+
+    .link2 {
+      float: right;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="pink-header"></div>
+  <div class="card mx-auto" style="width: 400px; margin-top: 50px; background-color: rgba(255, 255, 255, 0.8);">
+    <div class="card-body">
+      <a href="admin_homepage.php" class="link1">返回首页</a><br><br><br>
+      <h5 class="card-title text-center fw-bold">管理员登录</h5>
+      <form method="post" action="admin_login.php">
+        <div class="mb-3">
+          <label for="phonenumber" class="form-label">账号：</label>
+          <input type="text" class="form-control" id="phonenumber" name="phonenumber" placeholder="请输入手机号">
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">密码：</label>
+          <input type="password" class="form-control" id="password" name="password" placeholder="请输入密码">
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">登录</button><br>
+        </div>
+        <div class="d-flex justify-content-center mb-3">
+          <div class="form-check form-check-inline">
+            <input type="checkbox" class="form-check-input" id="agreeTerms" required>
+            <label class="form-check-label" for="agreeTerms" style="font-size: 14px;">我已认真阅读并同意<a href="恋爱印记用户使用协议.html"
+                target="_blank" class="card-link">《恋爱印记用户协议》</a></label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="watermark">
+    <!-- 水印内容-->
+    <p>@tq@tq</p>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+* {
+    font-size: 14pt;
+}
+
+body {
+    font-size: 14pt;
+    width: 800px;
+    margin: 10px auto;
+    margin-bottom: 20px;
+    border: 1px solid #96C2F1;
+    background-color: #EFF7FF;
+    border-radius: 2px;
+    padding: 20px;
+}
+
+h5 {
+    margin: 1px;
+    background-color: #B2D3F5;
+    height: 24px;
+}
+
+input {
+    color: #FFFFFF;
+    font-size: 18pt;
+    background: #99CCCC;
+    border-radius: 3px;
+}

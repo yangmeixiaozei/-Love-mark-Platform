@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="汤钦">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.staticfile.net/twitter-bootstrap/5.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.staticfile.net/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
+    <title>User Registration</title>
+    <style>
+        body {
+            background-image: url('image/9.jpg');
+            background-size: cover;
+            background-position: top;
+            background-repeat: no-repeat;
+        }
+        .watermark {
+            background-color: yellow;
+            position: fixed;
+            bottom: 50px;
+            right: 10px;
+            opacity: 0.5;
+            z-index: 2;
+        }
+
+        .watermark p {
+            text-align: center;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .link1 {
+            float: left;
+            margin-left: 10px;
+        }
+
+        .link2 {
+            float: right;
+            margin-right: 10px;
+        }
+    </style>
+    <SCRIPT LANGUAGE="JavaScript">
+        function test() {
+            if ((document.f1.phonenumber.value != '') && (document.f1.nickname.value != '') && (document.f1.pwd.value != '')) {
+                if (document.f1.pwd.value == document.f1.checkpwd.value) {
+                    var phoneno = document.f1.phonenumber.value;
+                    var pln = phoneno.length;
+                    if (pln == 11) {
+                        var str = document.f1.nickname.value;
+                        var sln = str.length;
+                        if (sln <= 25) {
+                            alert("注册成功！");
+                            return true; 
+                        } else {
+                            alert("无效！昵称长度不能超过25");
+                            return false; 
+                        }
+                    } else {
+                        alert("无效手机号！手机号长度应为11位");
+                        return false; 
+                    }
+                } else {
+                    alert("不通过!\n密码和确认密码不一致");
+                    return false; 
+                }
+            } else {
+                alert("账号、昵称和密码不能为空");
+                return false; 
+            }
+        }
+
+
+    </SCRIPT>
+</head>
+
+<body>
+    <div class="card mx-auto" style="width: 400px; margin-top: 50px; background-color: rgba(255, 255, 255, 0.8);">
+        <div class="card-body">
+            <a href="user_homepage.php" class="link1">返回首页</a>
+            <a href="login.html" class="link2">已有帐号？去登录</a><br><br>
+            <h5 class="card-title text-center fw-bold">注册</h5>
+            <form method="post" action="insert_user_into.php" name="f1" enctype="multipart/form-data"
+                onsubmit="return test()">
+                <div class="mb-3">
+                    <label for="phonenumber" class="form-label">账号：</label>
+                    <input type="text" class="form-control" id="phonenumber" name="phonenumber" placeholder="请输入手机号">
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">昵称：</label>
+                    <input type="text" class="form-control" id="name" name="nickname" placeholder="请输入昵称">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">密码：</label>
+                    <input type="password" class="form-control" id="password" name="pwd" placeholder="请设置密码">
+                </div>
+                <div class="mb-3">
+                    <label for="checkPassword" class="form-label">确认：</label>
+                    <input type="password" class="form-control" id="checkPassword" name="checkpwd" placeholder="请再次输入密码">
+                </div>
+                <div class="mb-3">
+                    <label for="file" class="form-label">头像:</label>
+                    <input type="file" class="form-control" name="file" id="file">
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">注册</button><br>
+                </div>
+                <div class="d-flex justify-content-center mb-3">
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="agreeTerms" required>
+                        <label class="form-check-label" for="agreeTerms" style="font-size: 14px;">我已认真阅读并同意<a
+                                href="恋爱印记用户使用协议.html" target="_blank" class="card-link">《恋爱印记用户协议》</a></label>
+                    </div>
+                </div>
+        </div>
+        </form>
+    </div>
+    </div>
+    <div class="watermark">
+        <!-- 水印内容-->
+        <p>@tq@tq</p>
+    </div>
+</body>
+
+</html>

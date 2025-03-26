@@ -1,0 +1,119 @@
+body {
+  font-family: Verdana;
+  font-size: 14px;
+  margin: 0;
+  line-height: 150%;
+}
+
+#container {
+  margin: 0 auto;
+  width: 99vw;
+}
+#header {
+  height: 80px;
+  background-image: url("image/3.png");
+  background-position: center;
+  margin-bottom: 5px;
+  background-repeat: repeat;
+}
+#info {
+  height: 200px;
+  background-color: pink;
+  background-position: center;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  /* 水平居中 */
+  align-items: center;
+  /* 垂直居中 */
+}
+#mainContent {
+  background: url("image/bg10.jpg");
+  background-repeat: repeat-y;
+}
+#content {
+  float: right;
+  width: 675px;
+  padding: 10px;
+  background: #cff;
+}
+#footer {
+  height: 60px;
+  background: #6cf;
+  position: fixed;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+}
+.clearfloat {
+  clear: both;
+  height: 0;
+  font-size: 1px;
+  line-height: 0px;
+}
+.online_user-info {
+  display: flex;
+  /* 使容器内的元素垂直排列 */
+  flex-direction: column; /* 设置垂直排列 */
+  float: left; /* 使元素浮动到左边 */
+  position: absolute; /* 相对于其父元素定位 */
+  left: 5vw; /* 定位到左边 */
+  margin-top: 50px; /* 调整顶部边距 */
+  margin-bottom: 50px; /* 调整底部边距 */
+}
+.user-info {
+  display: flex;
+  /* 使容器内的元素垂直排列 */
+  flex-direction: column; /* 设置垂直排列 */
+  align-items: flex-start;
+  /* 垂直对齐顶部 */
+  flex-wrap: wrap;
+  /* 允许子元素换行 */
+  margin-top: 50px; /* 调整顶部边距 */
+  margin-bottom: 50px; /* 调整底部边距 */
+}
+
+.avatar {
+  width: 80px;
+  /* 设置头像宽度 */
+  height: 80px;
+  /* 设置头像高度 */
+  border-radius: 50%;
+  /* 使头像圆角 */
+  margin-right: 20px; /* 头像之间的间距 */
+  margin-left: 20px; /* 头像之间的间距 */
+}
+
+.heart {
+  width: 65px;
+  /* 设置跳动的心宽度 */
+  height: 65px;
+  /* 设置跳动的心高度 */
+  margin-top: -15px;
+  /* 心形图标与头像之间的间距 */
+}
+
+.nickname {
+  font-size: 20px;
+  /* 设置昵称字体大小 */
+  margin-top: 10px;
+  /* 昵称与头像之间的间距 */
+}
+.welcome{
+  position: absolute;
+  left: 1vw;
+  margin-top: 0;
+}
+.boundMessage {
+  display: flex;
+  /* 使容器内的元素垂直排列 */
+  flex-direction: column; /* 设置垂直排列 */
+  float: right; /* 使元素浮动到左边 */
+  position: absolute; /* 相对于其父元素定位 */
+  right: 10vw; /* 定位到左边 */
+  margin-top: 50px; /* 调整顶部边距 */
+  margin-bottom: 50px; /* 调整底部边距 */
+}
+
+
+
